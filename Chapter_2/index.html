@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      #player {
+        display: none;
+      }
+      #custom-audio-player {
+        width: 300px;
+        height: 50px;
+        background: #f3f3f3;
+        border: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+      }
+      #play-button,
+      #pause-button {
+        background: #007bff;
+        border: none;
+        color: white;
+        padding: 10px;
+        margin: 0 5px;
+        cursor: pointer;
+      }
+      #pause-button {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>say something</div>
+    <p>say something</p>
+    <img
+      src="https://mimg.segye.com/content/image/2023/04/20/20230420520728.jpg"
+    />
+    <input type="text" />
+    <input type="password" />
+    <button>로그인</button>
+
+    <a href="https://www.google.com"> go to google</a>
+    <div id="player"></div>
+
+    <div id="player"></div>
+    <div id="custom-audio-player">
+      <button id="play-button">Play</button>
+      <button id="pause-button">Pause</button>
+      <button id=""
+    </div>
+
+    <script>
+      // Load YouTube IFrame Player API
+      var tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '0',
+          width: '0',
+          videoId: 'oojsLaMz2j4',
+          events: {
+            onReady: onPlayerReady,
+            onStateChange: onPlayerStateChange,
+          },
+        });
+      }
+
+      function onPlayerReady(event) {
+        document
+          .getElementById('play-button')
+          .addEventListener('click', function () {
+            player.playVideo();
+          });
+
+        document
+          .getElementById('pause-button')
+          .addEventListener('click', function () {
+            player.pauseVideo();
+          });
+      }
+
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          document.getElementById('play-button').style.display = 'none';
+          document.getElementById('pause-button').style.display =
+            'inline-block';
+        } else {
+          document.getElementById('play-button').style.display = 'inline-block';
+          document.getElementById('pause-button').style.display = 'none';
+        }
+      }
+    </script>
+  </body>
+</html>
