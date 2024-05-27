@@ -35,69 +35,75 @@
   </head>
 
   <body>
-    <div>say something</div>
-    <p>say something</p>
-    <img
-      src="https://mimg.segye.com/content/image/2023/04/20/20230420520728.jpg"
-    />
-    <input type="text" />
-    <input type="password" />
-    <button>로그인</button>
-
-    <a href="https://www.google.com"> go to google</a>
-    <div id="player"></div>
-
-    <div id="player"></div>
-    <div id="custom-audio-player">
-      <button id="play-button">Play</button>
-      <button id="pause-button">Pause</button>
-      <button id=""
+    <h3>자기 소개서</h3>
+    <p>안녕하세요. 저는 <strong>주상우</strong> 입니다.</p>
+    <h3>좋아하는 음식</h3>
+    <ul>
+      <li>김치</li>
+      <li>치즈</li>
+      <li>피자</li>
+    </ul>
+     <!--image -->
+    <h3>좋아하는 가수</h3>
+    <div style="display: inline-block; text-align: center">
+      <img
+        src="https://i.namu.wiki/i/iQtgN4LchHOz2CaGuS1G2ingCUTT5qRULyweFZwhKjAao_AQ32rGhmbo1ak4LChoTgH3wK86IkHpcE3fh5J_D2MIivRhFAnrmYLl3gQxH-_Z03U6Kvkx_9rmtMyO_LbPeGiHP71YN25XCXqnBAH7gA.webp"
+        style="width: 250px; height: 400px"
+      />
+      <p>윤하</p>
     </div>
+    <!--하이퍼링크 -->
+    <a
+      href="https://ticket.interpark.com/webzine/paper/TPNoticeView.asp?bbsno=34&pageno=1&stext=%C0%B1%C7%CF&no=49607&groupno=49607&seq=0&KindOfGoods=TICKET&Genre=&sort=WriteDate"
+      style="display: block"
+      >윤하 공연 보러가기</a
+    >
+    <!--audio -->
+    <h3> 좋아하는 노래</h3>
+    <table>
+      <tr>
+          <td><u><b>기다리다</b></u></td>
+          <td>
+              <audio autoplay controls>
+                  <source src="./younha/Waiting.mp4" type="audio/mp3">
+              </audio>
+          </td>
+      </tr>
+      <tr>
+        <td><u><b>추억은 아름다운 기억</b></u></td>
+        <td>
+          <audio autoplay controls>
+            <source src="./younha/beautifulMemory.mp4" type="audio/mp3">
+        </audio>
+        </td>
+      </tr>
+  </table>
+   
+    <!--table -->
 
-    <script>
-      // Load YouTube IFrame Player API
-      var tag = document.createElement('script');
-      tag.src = 'https://www.youtube.com/iframe_api';
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    <table border="1" width ="300" height="50">
+      <tr>
+        <th scope="col">질문</td>
+        <th scope="col">이름</td>
+      </tr>
+      <tr>
+        <td>사는곳</td>
+        <td>아파트</td>
+      </tr>
+      <tr>
+        <td>나이</td>
+        <td>17살</td>
+      </tr>
+    </table>
 
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '0',
-          width: '0',
-          videoId: 'oojsLaMz2j4',
-          events: {
-            onReady: onPlayerReady,
-            onStateChange: onPlayerStateChange,
-          },
-        });
-      }
 
-      function onPlayerReady(event) {
-        document
-          .getElementById('play-button')
-          .addEventListener('click', function () {
-            player.playVideo();
-          });
+    <!--button-->
+    <p></p>
+      <input type="text" placeholder="이메일을 입력해 주세요">
+      <input type="text" value="486" >
 
-        document
-          .getElementById('pause-button')
-          .addEventListener('click', function () {
-            player.pauseVideo();
-          });
-      }
+      <button>전송</button>
+    
 
-      function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING) {
-          document.getElementById('play-button').style.display = 'none';
-          document.getElementById('pause-button').style.display =
-            'inline-block';
-        } else {
-          document.getElementById('play-button').style.display = 'inline-block';
-          document.getElementById('pause-button').style.display = 'none';
-        }
-      }
-    </script>
   </body>
 </html>
