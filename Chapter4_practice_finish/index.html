@@ -14,7 +14,12 @@
 
   <body>
     <!--네비게이션 영역-->
-    <div class="navbar">
+    <div class="navbar-left">
+      <a href="#" class="nav-item"> Google 정보</a>
+      <a href="#" class="nav-item"> 스토어</a>
+    </div>
+
+    <div class="navbar-right">
       <a href="#" class="nav-item"> Gmail</a>
       <a href="#" class="nav-item"> Images</a>
       <!--CDN -->
@@ -38,31 +43,35 @@
         <button class="button-style">Google Search</button>
         <button class="button-style">I'm Feeling Lucky</button>
       </div>
-      <div>
-        <!-- 버튼 --> 해당 부분 구현 해보기 
-        Google offered in:
-        <a href="#">한국어</a>
-        <a href="#">Tiếng Việt</a>
-        <a href="#">Français</a>
-        <a href="#">中文(简体)</a>
+
+      <!-- germini -->
+      <div class="germini-area">
+        <span
+          ><a href="https://gemini.google.com/app?hl=ko" class="germini-item"
+            >Gemini Advanced</a
+          ></span
+        >
+        <span class="germini-other-item"
+          >를 통해 최고 성능의 Google AI와 특별한 기능들을 경험해 보세요</span
+        >
       </div>
     </div>
     <!--footer-->
     <div class="footer">
       <!--첫번쨰 줄-->
-      <div class="first-line">Korea</div>
+      <div class="first-line">
+        <span class="first-line-item">대한민국 </span>
+      </div>
       <div class="second-line">
-        <span>
-          <a href="#">About</a>
-          <a href="#">Advertising</a>
-          <a href="#">Business</a>
-          <a href="#">How search works</a>
+        <span class="footer-line-left">
+          <a href="#" class="second-line-item">광고</a>
+          <a href="#" class="second-line-item">비즈니스</a>
+          <a href="#" class="second-line-item">검색의 원리</a>
         </span>
-        <!--두번쨰 줄-->
-        <span class="second-line-second">
-          <a href="#">Privacy</a>
-          <a href="#">Term</a>
-          <a href="#">Settings</a>
+        <span class="footer-line-right">
+          <a href="#" class="second-line-item">개인정보처리방침</a>
+          <a href="#" class="second-line-item">약관</a>
+          <a href="#" class="second-line-item">설정</a>
         </span>
       </div>
     </div>

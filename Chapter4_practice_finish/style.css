@@ -1,0 +1,188 @@
+body {
+  /*
+css에서 태그에 impact를 주는 세갖
+
+1. class . 
+2. id #
+3. 태그에 직접 주는 방식 null 
+
+여기서는 태그에서 직접 주는 방식 
+*/
+  display: contents;
+}
+
+.navbar-left {
+  float: left;
+  margin: 20px;
+  /* border: 1px solid red; */
+}
+
+.navbar-right {
+  float: right;
+  margin: 20px;
+  /* border: 1px solid red; */
+}
+.nav-item {
+  text-decoration: none;
+  color: black;
+  /**글자 사이 간격**/
+  margin-right: 15px;
+}
+/*hover 이벤트를 주는 것*/
+.nav-item:hover {
+  text-decoration: underline;
+}
+.main {
+  margin-top: 300px;
+  text-align: center;
+}
+.input-area {
+  /* 위 div 밖의 공간 사이를 20px로*/
+  margin-top: 20px;
+}
+.input-box {
+  /* 검색창 */
+  width: 584px;
+  height: 46px;
+  border-radius: 24px; /* 모서리 둥글게  */
+  border: 1px solid #dfe1e5; /* 테두리색 여리여리하게 색 변경 */
+  /*
+검색창에서 text 입력을 위해 padding-left: ,padding-right: 로 조절 
+*/
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.search-icon {
+  /* 
+position : html 태그를 어디다 어떻게 위치 시킬지 정하는 규칙
+relative 내가 있는 위치 (요소 자기 자신을 기준으로 배치) left 로방향으로 적용
+이러한 적용을 돋보기 모양 아이콘에 적용해서 검색창에 들어가게 함
+*/
+  position: relative;
+  left: 40px;
+  color: #9aa0a6;
+}
+.mic-icon {
+  /* 
+position : html 태그를 어디다 어떻게 위치 시킬지 정하는 규칙
+relative 내가 있는 위치 (요소 자기 자신을 기준으로 배치)  right로 방향으로 적용
+이러한 적용을 돋보기 모양 아이콘에 적용해서 검색창에 들어가게 함
+*/
+  position: relative;
+  right: 50px;
+  color: #9aa0a6;
+}
+.button-area {
+  /*검색창과 버튼 사이 공간을 조절 */
+  padding-top: 18px;
+}
+.button-style {
+  /* 
+버튼을 꾸며보자
+개발자 모드로 확인후 css 적용
+*/
+  background-color: #f8f9fa; /*배경색*/
+  border: 1px solid #f8f9fa; /*테두리*/
+  border-radius: 4px; /*테두리 다듬기*/
+  color: #3c4043;
+  font-family: Apple SD Gothic Neo, arial, sans-serif; /*폰트 스타일*/
+  font-size: 14px;
+  margin: 11px 4px;
+  /*
+padding은 값이 1개, 2개 ,4개가 들어갈 수 있음
+1개 : 네방향 다 같은거 
+2개: 세로방향 (위아래) 가로방향(오른쪽 왼쪽) 
+4개: 
+*/
+  padding: 0 16px; /*버튼 안의 공간을 확보를 위해 padding*/
+  /* */
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+/*버튼에 hover 이벤트 주기*/
+.button-style:hover {
+  /*
+hover를 적용하는 팁;; https://www.notion.so/3-389ec503cbea47ccafbf0c17b2b9ba7d
+*/
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  border: 1px solid #dadce0;
+  color: #202124;
+}
+/*GERMINI 설정 */
+.germini-area {
+  /*검색창과 버튼 사이 공간을 조절 */
+  padding-top: 18px;
+}
+
+.germini-item {
+  text-decoration: none;
+  font-family: Apple SD Gothic Neo, arial, sans-serif;
+  color: #99c3ff;
+}
+.germini-other-item {
+  font-family: Apple SD Gothic Neo, arial, sans-serif;
+  color: #070707;
+}
+
+.germini-item:visited {
+  color: #c58af9;
+}
+.footer {
+  /*
+position : 요소를 어디에 위치시킬까 ..
+absolute : 절대값
+bottom : absolute 속성을 받아서 바닦에 해당 footer 클래스를 받는 것을 위치시킴 
+*/
+  position: absolute;
+  bottom: 0px;
+  background: f2f2f2; /* 배경색 */
+  /* 
+position: absolute;
+bottom: 0px;
+absolute를 가지면 content양만 가짐
+width: 100%; 으로 크기 converter
+100%;는 상단의 부모에 대한 100% 
+해당 div의 최상단 부모는 body 태그 
+*/
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+/* */
+.first-line {
+  padding: 10px 30px;
+  border-bottom: 1px solid #a2a2a280; /*경계선 그리기*/
+  /* font-size: 15px; */
+  /* color: var(--YLNNHc); */
+}
+.second-line {
+  padding: 30px 30px;
+  border-bottom: 1px solid #a2a2a2;
+  /* color: var(--YLNNHc); */
+}
+.footer-line-left {
+  float: left;
+}
+/*float으로 오른쪽으로 밀기 */
+.footer-line-right {
+  float: right;
+}
+.first-line-item {
+  color: black;
+  font-family: monospace;
+  font-size: 20px;
+  padding: 40px 10px;
+}
+
+.second-line-item {
+  text-decoration: none;
+  color: black;
+  font-family: monospace;
+  font-size: 20px;
+  padding: 40px 10px;
+}
