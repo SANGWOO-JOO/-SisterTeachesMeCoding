@@ -133,38 +133,29 @@ hover를 적용하는 팁;; https://www.notion.so/3-389ec503cbea47ccafbf0c17b2b9
   color: #c58af9;
 }
 .footer {
-  /*
-position : 요소를 어디에 위치시킬까 ..
-absolute : 절대값
-bottom : absolute 속성을 받아서 바닦에 해당 footer 클래스를 받는 것을 위치시킴 
-*/
   position: absolute;
   bottom: 0px;
-  background: f2f2f2; /* 배경색 */
-  /* 
-position: absolute;
-bottom: 0px;
-absolute를 가지면 content양만 가짐
-width: 100%; 으로 크기 converter
-100%;는 상단의 부모에 대한 100% 
-해당 div의 최상단 부모는 body 태그 
-*/
+  background: #f2f2f2;
+  /* 부모에 대한 100%
+    footer의 부모는 body
+  */
   width: 100%;
-  padding-bottom: 40px;
 }
 
-/* */
+/* var(--gS5jXb); 개발자 툴에서 이렇게 있는것 파라미터로 잡고 있는거엿다.. */
 .first-line {
   padding: 10px 30px;
-  border-bottom: 1px solid #a2a2a280; /*경계선 그리기*/
-  /* font-size: 15px; */
-  /* color: var(--YLNNHc); */
+  border-bottom: 1px solid #dadce0; /*경계선 그리기*/
+  font-size: 15px;
+  color: #202124;
 }
 .second-line {
-  padding: 30px 30px;
-  border-bottom: 1px solid #a2a2a2;
-  /* color: var(--YLNNHc); */
+  padding: 10px 30px;
+  font-size: 15px;
+  color: #202124;
 }
+
+/*footer 변경하기 */
 
 .footer-line-left {
   float: left;
@@ -174,20 +165,15 @@ width: 100%; 으로 크기 converter
   float: right;
 }
 
-.first-line-item {
-  padding: 15px 30px;
-  border-bottom: 1px solid var(--gS5jXb);
-  font-size: 15px;
-  color: var(--YLNNHc);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.second-line-item {
+.footer-a {
+  /* 밑줄 업애기*/
   text-decoration: none;
-  font-size: 14px;
-  font-family: Apple SD Gothic Neo, arial, sans-serif;
-  color: var(--COEmY);
-  padding: 40px 10px;
+  /* 글씨색 바꾸기*/
+  color: black;
+  /* 태그사이 공간주기*/
+  padding-right: 15px;
+}
+.footer-a:hover {
+  /*hover 이벤트 주기!*/
+  text-decoration: underline;
 }
