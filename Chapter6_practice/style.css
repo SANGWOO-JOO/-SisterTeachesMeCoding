@@ -1,0 +1,154 @@
+/* 공통적으로 쓰이는 것은 Body에 주는 것이 좋음*/
+body {
+  margin: 0px;
+  /*font-family:를 body에 주어 전체 폰트 스타일을 구성*/
+  font-family: Circular, spotify-circular, Helvetica, Arial, sans-serif;
+  color: white;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: #1ed760;
+}
+nav {
+  height: 80px;
+  background-color: black;
+  /* 
+  flex: 가로 정렬
+  justify-content flex로 가로정렬 된 것 정렬 시키기
+  align-items: ; 세로정렬에서 정렬 시키기 
+  */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main {
+  height: 969px;
+  /*
+  background 속성정리 링크
+  https://designer-ej.tistory.com/entry/CSS-background-%EC%86%8D%EC%84%B1-%EC%A0%95%EB%A6%ACcolor-image-position-repeat-%EB%93%B1 */
+  background-color: rgb(41, 65, 171);
+  background-image: url(https://www-growth.scdn.co/static/home/bursts.svg);
+  background-size: 175%; /* */
+  background-position: 46% 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item {
+  padding: 28px 17px; /*28px가로(L and R) 세로17px(S and N) */
+  font-weight: 700; /*글씨 무게*/
+}
+
+.headline {
+  font-size: 146px;
+  line-height: 166px;
+  color: #1ed760;
+  font-weight: 900;
+  position: relative;
+  left: 225px;
+  padding-bottom: 40px;
+}
+.headline-first {
+  position: relative; /*relative를 하면 있는 위치에서 위치 수정 */
+  left: -2.5em; /*-em : 글씨체 기준으로 이동 */
+}
+.sub-headline {
+  color: #1ed760;
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 40px;
+}
+.button-area {
+  text-align: center;
+}
+.button-style {
+  padding: 14px 32px;
+  background-color: #1ed760;
+  border-radius: 500px;
+  border: none;
+  font-weight: 700;
+}
+.button-style:hover {
+  transform: scale(1.1);
+}
+.temp {
+  border: 5px solid red;
+  height: 100vh; /*내 화면의 100를 */
+  position: relative;
+}
+footer {
+  height: 530px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+.yellow-box {
+  max-width: 1170px;
+  width: 100%;
+  padding: 60px;
+}
+
+.orange-box1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.red-box1 {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.red-box2 {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+.green-box {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+.title {
+  color: #919496;
+  font-weight: 900;
+  margin: 20px 0px;
+}
+.footer-menu-item {
+  padding-bottom: 15px;
+  padding-top: 3px;
+  font-size: 16px;
+}
+.icon-box {
+  width: 54px;
+  height: 54px;
+  background-color: #222322;
+  border-radius: 50%;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  font-size: 24px;
+}
+.icon:hover {
+  color: #2de26d;
+}
+
+.orange-box2 {
+  color: #919496;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+}
+.orange-box3 {
+  color: #919496;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}

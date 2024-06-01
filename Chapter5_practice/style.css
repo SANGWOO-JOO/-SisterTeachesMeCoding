@@ -100,8 +100,6 @@
 
 .mother5 {
   border: 5px solid red;
-  display: flex; /*display: flex;를 쓰면 세로가 가로 정렬이 된다 */
-  flex-direction: column; /*박스 정렬을 바꿈 column같이..  */
   height: 100vh; /*내 화면의 100를 */
   position: relative;
 }
