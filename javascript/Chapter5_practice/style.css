@@ -1,0 +1,41 @@
+body{
+  margin: 0;
+  background-image: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+}
+
+.container{
+  background-color: white;
+  min-height: 100vh;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.task-area{
+  border: 1px solid lightgrey;
+}
+
+.task-tabs{
+  display: flex;
+  border-bottom:  1px solid lightgrey;
+  position: relative;
+
+}
+
+.task-tabs div{
+  padding: 1em;
+}
+
+#under-line{
+  height: 4px;
+  background-color: pink;
+  position: absolute;
+  width: 60px;
+  left: 0px;
+  top: 52px;
+  padding: 0px;
+}
+
+.task{
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
